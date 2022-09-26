@@ -1,6 +1,6 @@
 {
     "name": "ming-ts-jest-sample",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A simple project to demonstrate TypeScript + Jest + ts-jest",
     "main": "dist/index.js",
     "source": "src/index.ts",
@@ -10,15 +10,21 @@
     "license": "MIT",
     "devDependencies": {
         "@types/jest": "^22.1.1",
+        "@typescript-eslint/eslint-plugin": "^5.38.0",
+        "@typescript-eslint/parser": "^5.38.0",
+        "eslint": "^8.24.0",
         "jest": "^22.1.4",
         "microbundle": "^0.13.0",
-        "ts-jest": "^22.0.2",
-        "typescript": "^2.7.1"
+        "ts-jest": "^22.0.2"
     },
     "scripts": {
         "compile": "tsc",
         "test": "jest --env=node --colors --coverage test",
         "dev": "microbundle watch",
-        "build": "microbundle"
+        "build": "microbundle",
+        "lint": "eslint . --ext .ts --config .eslintrc.yml"
+    },
+    "dependencies": {
+        "typescript": "^4.8.3"
     }
 }
